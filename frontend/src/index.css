@@ -1171,3 +1171,269 @@ button {
   align-items: center;
   justify-content: center;
 }
+
+/* =========================================================
+   Mobile & Tablet Responsive Media Queries
+   ========================================================= */
+
+/* Tablets & Small Laptops (<= 1024px) */
+@media (max-width: 1024px) {
+  .page-content {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .auth-split-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile Devices & Small Tablets (<= 768px) */
+@media (max-width: 768px) {
+  /* Navbar adjustments */
+  .navbar {
+    padding: 0.65rem 1rem;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .nav-brand span {
+    font-size: 1.15rem;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    justify-content: flex-start;
+    padding: 0.35rem 0.5rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-link {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+  }
+
+  .nav-right {
+    gap: 0.5rem;
+  }
+
+  .user-badge {
+    padding: 0.25rem 0.6rem 0.25rem 0.35rem;
+    gap: 0.45rem;
+  }
+
+  .user-name-text {
+    max-width: 90px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.78rem;
+  }
+
+  .membership-tag {
+    font-size: 0.62rem;
+    padding: 0.1rem 0.4rem;
+  }
+
+  .btn-logout {
+    padding: 0.35rem 0.65rem;
+    font-size: 0.75rem;
+  }
+
+  /* Page Content Container */
+  .page-content {
+    padding: 1rem 0.85rem;
+  }
+
+  .page-title {
+    font-size: 1.35rem;
+  }
+
+  .page-subtitle {
+    font-size: 0.84rem;
+  }
+
+  /* Split Auth Layout for Mobile: Stack & Hide Heavy Slider */
+  .auth-split-wrapper {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+
+  .auth-form-side {
+    width: 100%;
+    padding: 1.5rem 1rem 2rem 1rem;
+    overflow-y: visible;
+  }
+
+  .auth-form-container {
+    max-width: 100%;
+  }
+
+  .auth-slider-side {
+    display: none !important;
+  }
+
+  /* Tabs Bar (Classes, Admin) */
+  .section-tabs-bar {
+    overflow-x: auto;
+    white-space: nowrap;
+    justify-content: flex-start;
+    padding: 0.3rem;
+    gap: 0.35rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .section-tabs-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .section-tab-btn {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+  }
+
+  /* Category Filter Pills */
+  .category-pills {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 0.4rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .category-pills::-webkit-scrollbar {
+    display: none;
+  }
+
+  .category-pill {
+    padding: 0.35rem 0.8rem;
+    font-size: 0.78rem;
+    flex-shrink: 0;
+  }
+
+  /* Trainer and Cards Grids */
+  .trainer-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .trainer-card {
+    padding: 1.15rem;
+  }
+
+  /* KPI Grid */
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .kpi-card {
+    padding: 0.9rem;
+  }
+
+  .kpi-number {
+    font-size: 1.45rem;
+  }
+
+  /* Booking Item Card */
+  .booking-card-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.15rem;
+  }
+
+  .booking-card-item > div:last-child {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .booking-card-item .btn-success-sm,
+  .booking-card-item .btn-danger-sm {
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+
+  /* Table Header & Search */
+  .table-header-title {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .table-header-title > div {
+    width: 100% !important;
+  }
+
+  .table-header-title input {
+    width: 100% !important;
+  }
+
+  .custom-table th,
+  .custom-table td {
+    padding: 0.65rem 0.85rem;
+    font-size: 0.8rem;
+  }
+
+  /* Blog & Facilities Grids */
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 1.15rem;
+  }
+
+  .facility-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Membership Selection Grid */
+  .tier-select-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Extra Small Phones (<= 480px) */
+@media (max-width: 480px) {
+  .page-content {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .kpi-grid {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+
+  .auth-form-side {
+    padding: 1rem 0.75rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+
+  .time-slots-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
